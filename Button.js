@@ -5,33 +5,31 @@ import { LinearGradient } from "react-native-svg";
 export default function ButtonGradient(){
 
     return(
-        <View>
-        <Button
-        title="Ingresa"
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      <Button
-      styles={styles.buttonGoogle}
-      title="Ingresa con tu correo"
-      onPress={() => Alert.alert('Simple Button pressed')}
-    />
-    </View>
+    <TouchableOpacity
+    style={styles.buttonGoogle}>
+        <Text
+        style={styles.texto}>Ingresa</Text>
+    
+    </TouchableOpacity>
+
     );
 }
 
 const styles = StyleSheet.create({
     buttonGoogle: {
-      flex: 1,
+        width:200,
+        height:45,  
       margin:10,
-      backgroundColor: "red",
+      backgroundColor: "yellow",
       alignItems: "center",
       justifyContent: "center",
+      borderRadius:40,
+      elevation:5,
+      
     },
-    correo: {
-      fontSize: 40,
-      fontWeight: "bold",
-      textAlign: "left",
-      color: "#ffd700"
+    texto: {
+     fontWeight: "bold",
     },
+    
 
   });
